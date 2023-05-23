@@ -7503,7 +7503,7 @@ MonoBehaviour:
     speed: 2.4
   - spawnTime: 0.2
     spriterType: 2
-    health: 200
+    health: 1000
     speed: 2.7
   levelTime: 0
 --- !u!1 &611463417
@@ -9438,7 +9438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLive: 0
   gameTime: 0
-  maxGameTime: 151
+  maxGameTime: 181
   playerId: 0
   health: 0
   maxHealth: 100000
