@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     public Rigidbody2D target;
 
     bool isLive;
-    bool bossKill; // 적이 보스 적인 경우를 나타내는 변수
+    public bool bossKill; // 적이 보스 적인 경우를 나타내는 변수
 
     Rigidbody2D rigid;
     Collider2D coll;
@@ -76,8 +76,13 @@ public class Enemy : MonoBehaviour
 
         if (data.spriterType == animCon.Length - 1)
         {
-            spriter.transform.localScale = new Vector3(4f, 4f, 4f);
+            spriter.transform.localScale = new Vector3(5f, 5f, 5f);
             bossKill = true;
+        }
+        else if(data.spriterType == animCon.Length - 2)
+        {
+            spriter.transform.localScale = new Vector3(2f, 2f, 2f);
+            bossKill = false;
         }
         else
         {

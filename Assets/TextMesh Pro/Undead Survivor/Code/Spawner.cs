@@ -60,6 +60,12 @@ public class Spawner : MonoBehaviour
 
            
         }
+        else if(level == spawnData.Length - 2)
+        {
+            enemy.transform.position = spawnPoint[Random.Range(1, 4)].position;
+            enemy.GetComponent<Enemy>().Init(spawnData[level]);
+        }
+
         else
         {
             enemy.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;

@@ -8,13 +8,15 @@ public class AchiveManager : MonoBehaviour
     public GameObject[] lockCharacter;
     public GameObject[] unlockCharacter;
     public GameObject uiNotice;
+    
 
-    enum Achive { UnlockPoatato, UnlockBean }
+    enum Achive { UnlockAlien, UnlockDeathV }
     Achive[] achives;
     WaitForSecondsRealtime wait;
 
     void Awake()
     {
+        
         achives = (Achive[])Enum.GetValues(typeof(Achive));
         wait = new WaitForSecondsRealtime(5);
         if (!PlayerPrefs.HasKey("MyData"))
@@ -65,11 +67,13 @@ public class AchiveManager : MonoBehaviour
 
         switch(achive)
         {
-            case Achive.UnlockPoatato:
+            case Achive.UnlockAlien:
                 isAchive = GameManager.instance.kill >= 10;
                 break;
-            case Achive.UnlockBean:
-                isAchive = GameManager.instance.gameTime == GameManager.instance.maxGameTime;
+            case Achive.UnlockDeathV:
+                isAchive = GameManager.instance.gameTime 
+                    == GameManager.instance.maxGameTime 
+                   ;
                 break;
         }
 

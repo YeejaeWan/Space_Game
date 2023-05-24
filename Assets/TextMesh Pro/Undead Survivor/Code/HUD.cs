@@ -13,8 +13,8 @@ public class HUD : MonoBehaviour
 
     void Awake()
     {
-        myText = GetComponent<Text>();
-        mySlider = GetComponent<Slider>();
+       myText = GetComponentInChildren<Text>();
+        mySlider = GetComponentInChildren<Slider>();
     }
 
     void LateUpdate()
