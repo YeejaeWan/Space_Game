@@ -7508,11 +7508,11 @@ MonoBehaviour:
   - spawnTime: 3.5
     spriterType: 3
     health: 300
-    speed: 2.4
+    speed: 3
   - spawnTime: 0.2
     spriterType: 4
     health: 2000
-    speed: 2.7
+    speed: 3.5
   levelTime: 0
 --- !u!1 &611463417
 GameObject:

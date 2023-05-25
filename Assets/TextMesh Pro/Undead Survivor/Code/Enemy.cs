@@ -12,12 +12,14 @@ public class Enemy : MonoBehaviour
 
     bool isLive;
     public bool bossKill; // 적이 보스 적인 경우를 나타내는 변수
+  
 
     Rigidbody2D rigid;
     Collider2D coll;
     Animator anim;
     SpriteRenderer spriter;
     WaitForFixedUpdate wait;
+  
 
     void Awake()
     {
@@ -26,6 +28,7 @@ public class Enemy : MonoBehaviour
         spriter = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         wait = new WaitForFixedUpdate();
+
     }
 
     void FixedUpdate()
@@ -97,6 +100,8 @@ public class Enemy : MonoBehaviour
             return;
 
         health -= collision.GetComponent<Bullet>().damage;
+
+      
         StartCoroutine(KnockBack());
 
         if (health > 0)
@@ -131,11 +136,18 @@ public class Enemy : MonoBehaviour
     }
 
     IEnumerator KnockBack()
-    {
+    {    
+        
+       
         yield return wait; // 하나의 물리 프레임 딜레이
-        Vector3 playerPos = GameManager.instance.player.transform.position;
-        Vector3 dirVec = transform.position - playerPos;
+
+        
+         Vector3 playerPos = GameManager.instance.player.transform.position;
+         Vector3 dirVec = transform.position - playerPos;
         rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse);
+        
+
+
     }
 
     void Dead()
