@@ -7495,22 +7495,26 @@ MonoBehaviour:
   spawnData:
   - spawnTime: 0.7
     spriterType: 0
-    health: 15
+    health: 30
     speed: 1.5
   - spawnTime: 0.5
     spriterType: 1
-    health: 20
+    health: 50
     speed: 2.1
   - spawnTime: 0.4
     spriterType: 2
-    health: 25
+    health: 70
     speed: 2.2
-  - spawnTime: 3.5
+  - spawnTime: 0.3
     spriterType: 3
+    health: 90
+    speed: 2.5
+  - spawnTime: 3.5
+    spriterType: 4
     health: 300
     speed: 3
   - spawnTime: 0.2
-    spriterType: 4
+    spriterType: 5
     health: 2000
     speed: 3.5
   levelTime: 0
