@@ -6948,7 +6948,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 7.975
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7515,10 +7515,14 @@ MonoBehaviour:
     speed: 3
   - spawnTime: 3.5
     spriterType: 5
-    health: 300
+    health: 250
     speed: 3.2
-  - spawnTime: 0.2
+  - spawnTime: 7
     spriterType: 6
+    health: 400
+    speed: 3.3
+  - spawnTime: 0.2
+    spriterType: 7
     health: 2000
     speed: 3.5
   levelTime: 0
@@ -9454,7 +9458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLive: 0
   gameTime: 0
-  maxGameTime: 241
+  maxGameTime: 301
   playerId: 0
   health: 0
   maxHealth: 100
