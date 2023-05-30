@@ -7499,27 +7499,27 @@ MonoBehaviour:
     speed: 1.5
   - spawnTime: 0.5
     spriterType: 1
-    health: 50
+    health: 100
     speed: 2.1
   - spawnTime: 0.4
     spriterType: 2
-    health: 70
+    health: 150
     speed: 2.2
   - spawnTime: 0.3
     spriterType: 3
-    health: 90
+    health: 200
     speed: 2.5
   - spawnTime: 1
     spriterType: 4
-    health: 150
+    health: 250
     speed: 3
   - spawnTime: 3.5
     spriterType: 5
-    health: 250
+    health: 500
     speed: 3.2
   - spawnTime: 7
     spriterType: 6
-    health: 400
+    health: 750
     speed: 3.3
   - spawnTime: 0.2
     spriterType: 7
