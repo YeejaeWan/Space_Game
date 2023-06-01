@@ -7511,15 +7511,15 @@ MonoBehaviour:
     speed: 2.5
   - spawnTime: 1
     spriterType: 4
-    health: 250
+    health: 300
     speed: 3
   - spawnTime: 3.5
     spriterType: 5
-    health: 500
+    health: 650
     speed: 3.2
   - spawnTime: 7
     spriterType: 6
-    health: 750
+    health: 1000
     speed: 3.3
   - spawnTime: 0.2
     spriterType: 7
