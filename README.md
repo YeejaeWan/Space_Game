@@ -128,7 +128,10 @@
 |<img src="https://github.com/YeejaeWan/Space_Game/assets/104914172/fc3629d8-0a8e-4cc5-8503-21d069ac5354" width="300" height="400"/>|
 
 
+***
+![image](https://github.com/YeejaeWan/Space_Game/assets/104914172/5919d4ae-b222-4d2e-bbe3-d7152cfd0c09)
 
+- 유튜버 골드메탈님의 영상을 참조해서 개발하였습니다.
 
 
 
