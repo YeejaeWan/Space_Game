@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
     }
 
 
-
+    //test
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Enemy") || per == -100)
