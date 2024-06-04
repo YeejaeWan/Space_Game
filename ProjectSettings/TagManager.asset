@@ -14,6 +14,10 @@ TagManager:
   - Coin
   - PlayerRay
   - Rocket
+  - Ground
+  - Bullet
+  - Area
+  - Stage1
   layers:
   - Default
   - TransparentFX

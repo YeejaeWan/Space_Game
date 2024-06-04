@@ -22,6 +22,8 @@ public class Bullet : MonoBehaviour
         // 방향 벡터를 정규화하여 사용
         Vector3 normalizedDir = dir.normalized;
         rigid.velocity = normalizedDir * 15f;  // 속도 설정
+
+        
     }
 
 

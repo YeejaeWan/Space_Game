@@ -18,39 +18,58 @@ public class Weapon : MonoBehaviour
         player = GameManager.instance.player; 
     }
 
-    
+
     void Update()
     {
         if (!GameManager.instance.isLive)
             return;
 
-
-        switch (id)
+        if (id == 0) // 칼의 경우
         {
-            case 0:
-                //Time.deltaTime -> 한프레임이 소비한 시간, z축을 건드려서 회전 
-                transform.Rotate(Vector3.back * speed *Time.deltaTime); 
-                
-
-                break;
-            default:
-                timer += Time.deltaTime;
-
-                if(timer > speed)
-                {
-                    timer = 0f;
-                    Fire();
-                }
-
-                break;
+            // 칼을 시계 방향으로 회전
+            transform.Rotate(Vector3.back * speed * Time.deltaTime);
         }
-
-        // 테스트용
-        if(Input.GetButtonDown("Jump"))
+        else
         {
-            LevelUp(10, 1);
+            timer += Time.deltaTime;
+            if (timer > speed)
+            {
+                timer = 0f;
+                Fire();
+            }
         }
     }
+
+    void Batch()
+    {
+        for (int index = 0; index < count; index++)
+        {
+            Transform bullet;
+
+            if (index < transform.childCount)
+            {
+                bullet = transform.GetChild(index);
+            }
+            else
+            {
+                bullet = GameManager.instance.pool.Get(prefabId).transform;
+                bullet.parent = transform;
+            }
+
+            bullet.localPosition = Vector3.zero;
+            bullet.localRotation = Quaternion.identity;
+
+            Vector3 rotVec = Vector3.forward * 360 * index / count;
+            bullet.Rotate(rotVec);
+            bullet.Translate(bullet.up * 1.5f, Space.World);
+
+            if (id != 0) // 칼이 아닌 경우에만 Rigidbody2D 설정
+            {
+                bullet.GetComponent<Bullet>().Init(damage, -100, Vector3.zero);
+            }
+        }
+    }
+
 
     // 레벨업
     public void LevelUp(float damage, int count)
@@ -106,40 +125,7 @@ public class Weapon : MonoBehaviour
         player.BroadcastMessage("ApplyGear",SendMessageOptions.DontRequireReceiver);
     }
 
-    void Batch()
-    {
-        for(int index =0; index < count; index++)
-        {
-            Transform bullet;
-            
-            //자식 오브젝트에서 가져옴
-            if(index < transform.childCount)
-            {
-                bullet = transform.GetChild(index);
-            }
-            else
-            {   
-                //자식 오브젝트에서 가져온 것이 모자라면 부모에서 가져옴
-                bullet = GameManager.instance.pool.Get(prefabId).transform;
-                bullet.parent = transform; //부모로 바꿈 (Player)
-
-            }
-
-
-            bullet.localPosition = Vector3.zero;
-            bullet.localRotation = Quaternion.identity;
-
-
-            Vector3 rotVec = Vector3.forward * 360 * index / count;
-            bullet.Rotate(rotVec);
-            bullet.Translate(bullet.up * 1.5f, Space.World);
-
-            //근접무기는 관통 숫자 상관 x, -1은 무한으로 관통
-            bullet.GetComponent<Bullet>().Init(damage, -100, Vector3.zero); 
-
-
-        }
-    }
+   
 
     void Fire()
     {
