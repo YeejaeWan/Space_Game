@@ -20,11 +20,11 @@ MonoBehaviour:
     m_Sprites:
     - {fileID: -742510783, guid: 31d468f75f6b27c47bf614bc54359a47, type: 3}
     - {fileID: -742510783, guid: 31d468f75f6b27c47bf614bc54359a47, type: 3}
-    - {fileID: -742510783, guid: 31d468f75f6b27c47bf614bc54359a47, type: 3}
-    - {fileID: -629208620, guid: 31d468f75f6b27c47bf614bc54359a47, type: 3}
+    - {fileID: -1251921665, guid: 31d468f75f6b27c47bf614bc54359a47, type: 3}
     - {fileID: -1251921665, guid: 31d468f75f6b27c47bf614bc54359a47, type: 3}
     - {fileID: -748928687, guid: 31d468f75f6b27c47bf614bc54359a47, type: 3}
     - {fileID: -748928687, guid: 31d468f75f6b27c47bf614bc54359a47, type: 3}
+    - {fileID: -1710561481, guid: 31d468f75f6b27c47bf614bc54359a47, type: 3}
     - {fileID: -1710561481, guid: 31d468f75f6b27c47bf614bc54359a47, type: 3}
     - {fileID: 1903843318, guid: 31d468f75f6b27c47bf614bc54359a47, type: 3}
     - {fileID: -629208620, guid: 31d468f75f6b27c47bf614bc54359a47, type: 3}
