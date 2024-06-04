@@ -19,11 +19,11 @@ public class Bullet : MonoBehaviour
         this.damage = damage;
         this.per = per;
 
-        if(per >= 0)
-        {
-            rigid.velocity = dir * 15f;
-        }
+        // 방향 벡터를 정규화하여 사용
+        Vector3 normalizedDir = dir.normalized;
+        rigid.velocity = normalizedDir * 15f;  // 속도 설정
     }
+
 
 
     void OnTriggerEnter2D(Collider2D collision)

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Scanner : MonoBehaviour
@@ -16,6 +18,20 @@ public class Scanner : MonoBehaviour
         nearestTarget = GetNearest();
 
     }
+
+    public List<Transform> GetNearestTargets(int count)
+    {
+        List<Transform> nearestTargets = new List<Transform>();
+        List<RaycastHit2D> sortedTargets = targets.OrderBy(t => Vector3.Distance(transform.position, t.transform.position)).ToList();
+
+        for (int i = 0; i < Math.Min(count, sortedTargets.Count); i++)
+        {
+            nearestTargets.Add(sortedTargets[i].transform);
+        }
+
+        return nearestTargets;
+    }
+
 
     Transform GetNearest()
     {
@@ -38,5 +54,6 @@ public class Scanner : MonoBehaviour
 
         return result;
     }
+
 
 }

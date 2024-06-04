@@ -53,16 +53,16 @@ public class Item : MonoBehaviour
 
     }
 
-   
+
 
     //버튼을 누르면 레벨 업 되면서 강화되는 함수
     public void OnClick()
     {
-        switch(data.itemType)
+        switch (data.itemType)
         {
             case ItemData.ItemType.Melee:
             case ItemData.ItemType.Range:
-                if(level == 0)
+                if (level == 0)
                 {
                     GameObject newWeapon = new GameObject();
                     weapon = newWeapon.AddComponent<Weapon>();
@@ -71,45 +71,25 @@ public class Item : MonoBehaviour
                 else
                 {
                     float nextDamage = data.baseDamage;
-                    int nextCount = 0;
+                    int nextCount = data.counts[level];  // 레벨마다 총알 수 증가
 
                     nextDamage += data.baseDamage * data.damages[level];
-                    nextCount += data.counts[level];
+                    nextCount += 1;  // 레벨업 할 때마다 총알 수 하나씩 증가
 
                     weapon.LevelUp(nextDamage, nextCount);
-
-
                 }
                 level++;
                 break;
-            case ItemData.ItemType.Glove:
-            case ItemData.ItemType.Shoe:
-                if(level ==0)
-                {  
-                    GameObject newGear = new GameObject();
-                    gear = newGear.AddComponent<Gear>();
-                    gear.Init(data);
-
-                }
-                else
-                {
-                    float nextRate = data.damages[level];
-                    gear.LevelUp(nextRate);
-                }
-                level++;
-                break;       
-            case ItemData.ItemType.Heal:
-                GameManager.instance.health = GameManager.instance.maxHealth;
-                break;
+                // 다른 케이스 처리
         }
 
-      
-
-        //최대 레벨이 됐을때
-        if(level == data.damages.Length) {
+        // 아이템 최대 레벨 처리
+        if (level == data.damages.Length)
+        {
             GetComponent<Button>().interactable = false;
         }
     }
+
 
 
 }

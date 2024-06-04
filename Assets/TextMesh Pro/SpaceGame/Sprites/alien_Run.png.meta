@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f29a030e3a236e2488019e6711bf432d
+guid: f2532ebf04047594bbefd9b9c071ae2f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -113,11 +113,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: space_enemy1_Dead_0
+      name: alien_Run_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fc8bd6e71ea10f49bd30c68972e4ead
-      internalID: 638462201
+      spriteID: b6f7143962849a041858c5edfb77a0ff
+      internalID: -328803045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: space_enemy1_Dead_1
+      name: alien_Run_1
       rect:
         serializedVersion: 2
         x: 19
@@ -152,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba8de10a820621d47b67fa25d6eaaa8a
-      internalID: -641099247
+      spriteID: d787c6816a7cb5849b35246119a5e810
+      internalID: 970419539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: space_enemy1_Dead_2
+      name: alien_Run_2
       rect:
         serializedVersion: 2
         x: 38
@@ -173,8 +185,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3df655b45c256874db58ecca503051ec
-      internalID: 662028814
+      spriteID: 7b2a1398b9466ab48865ae35ef0d7346
+      internalID: -1483923898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_Run_3
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 0
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02cc8a6bc0df374c822d0e7c0e5221f
+      internalID: -87291368
       vertices: []
       indices: 
       edges: []
@@ -190,9 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      space_enemy1_Dead_0: 638462201
-      space_enemy1_Dead_1: -641099247
-      space_enemy1_Dead_2: 662028814
+      alien_Run_0: -328803045
+      alien_Run_1: 970419539
+      alien_Run_2: -1483923898
+      alien_Run_3: -87291368
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

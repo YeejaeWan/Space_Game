@@ -52,11 +52,11 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    //레벨업
+    // 레벨업
     public void LevelUp(float damage, int count)
     {
-        this.damage = damage *Character.Damage;
-        this.count += count;
+        this.damage = damage * Character.Damage;
+        this.count += count; // 기존의 갯수에 추가
 
         if (id == 0)
             Batch();
@@ -141,26 +141,24 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    //총알 발사
     void Fire()
     {
-        //가까운 대상이 없으면 리턴
-        if (!player.scanner.nearestTarget)
-            return;
+        List<Transform> targets = player.scanner.GetNearestTargets(count);  // 여러 타겟을 가져옴
 
-        Vector3 targetPos = player.scanner.nearestTarget.position;
-        Vector3 dir = targetPos - transform.position;
-        dir = dir.normalized;
+        foreach (var target in targets)
+        {
+            if (target != null)
+            {
+                Vector3 targetPos = target.position;
+                Vector3 dir = (targetPos - transform.position).normalized;
+                Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
+                bullet.position = transform.position;  // 플레이어 위치에서 발사
+                bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);  // 회전
+                bullet.GetComponent<Bullet>().Init(damage, -1, dir);  // 관통력 설정, 관통 무제한으로 설정 가능
 
-        Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
-        bullet.position = transform.position; //플레이어 위치에서 발사
-        bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir); //회전
-        bullet.GetComponent<Bullet>().Init(damage, count, dir);
-
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
-
-
-
-
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
+            }
+        }
     }
+
 }

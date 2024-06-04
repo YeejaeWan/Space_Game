@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e662f43c81be6574abb35565dcc59e6f
+guid: f153f3171b85d1a43acb48b236fa4935
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -113,11 +113,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: space_enemy_Hit_0
+      name: space_enemy1_Hit_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe35ff7a2ba332d4cbd6fa50f9eafb2b
-      internalID: 611550834
+      spriteID: 4ae9a625ddf7ae34c95314a4ea5876e2
+      internalID: 730682107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: space_enemy_Hit_1
+      name: space_enemy1_Hit_1
       rect:
         serializedVersion: 2
         x: 19
@@ -152,8 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80373b1f15416b14abea0842b2d6f9eb
-      internalID: 221818872
+      spriteID: 9547265e8b2799240b40dae48415beaa
+      internalID: -837728675
       vertices: []
       indices: 
       edges: []
@@ -169,8 +181,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      space_enemy_Hit_0: 611550834
-      space_enemy_Hit_1: 221818872
+      space_enemy1_Hit_0: 730682107
+      space_enemy1_Hit_1: -837728675
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
